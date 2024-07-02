@@ -46,16 +46,16 @@ using namespace std;
 // }
 
 // XOR Approach:Time Complexity: O(N) & Space complexity O(1)
-int missingNumber(vector<int>&a, int N) {
-    int xor1=0, xor2=0;
-    for(int i=0; i<N-1; i++){
-      xor2= xor2^a[i];
-      xor1=xor1^(i+1);
-    }
-    xor1=xor1^N;
+// int missingNumber(vector<int>&a, int N) {
+//     int xor1=0, xor2=0;
+//     for(int i=0; i<N-1; i++){
+//       xor2= xor2^a[i];
+//       xor1=xor1^(i+1);
+//     }
+//     xor1=xor1^N;
 
-    return (xor1^xor2);
-}
+//     return (xor1^xor2);
+// }
 
 // Xor approach for leetcode
 int missingNumber(vector<int>& nums) {
@@ -79,7 +79,7 @@ int main(){
         arr.push_back(ele);
     }
     int n=arr.size();
-    cout<<missingNumber(arr,n);
+    cout<<missingNumber(arr);
     
     return 0;
 }
